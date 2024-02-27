@@ -1,0 +1,14 @@
+CollisionShape2D
+StaticBody2D
+Node
+Sprite2D
+TextureRect
+Area2D
+ParallaxLayer
+ParallaxBackground
+Camera2D
+Button
+ColorRect
+VBoxContainer
+MarginContainer
+Label

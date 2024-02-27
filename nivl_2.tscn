@@ -1,0 +1,178 @@
+[gd_scene load_steps=11 format=3 uid="uid://bepqkytjcktx8"]
+
+[ext_resource type="Script" path="res://nivl_2.gd" id="1_f2dse"]
+[ext_resource type="Texture2D" uid="uid://wya5jviu717u" path="res://assetsbuenos/mapahielo/Plataformahielo.png" id="2_j8bi8"]
+[ext_resource type="PackedScene" uid="uid://djrufs7wkhcup" path="res://game_over_screen.tscn" id="2_vh0kh"]
+[ext_resource type="PackedScene" uid="uid://c2ot30fltdyrm" path="res://particulas.tscn" id="3_fd7e7"]
+[ext_resource type="PackedScene" uid="uid://r4nm5hp5mjrd" path="res://Player/player.tscn" id="3_mmo53"]
+[ext_resource type="Texture2D" uid="uid://iq0nxeo0r2gv" path="res://assetsbuenos/mapahielo/pinchosmap2.png" id="4_wkiaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yu6uy"]
+size = Vector2(59, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36bn4"]
+size = Vector2(64, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdmwf"]
+size = Vector2(2004.97, 4.82029)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qacp"]
+
+[node name="Nivl2" type="Node"]
+script = ExtResource("1_f2dse")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverScreen" parent="UILayer" instance=ExtResource("2_vh0kh")]
+visible = false
+
+[node name="Spikes" type="StaticBody2D" parent="."]
+position = Vector2(-65, 173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
+position = Vector2(214, 609)
+shape = SubResource("RectangleShape2D_yu6uy")
+
+[node name="Trampa2" type="Sprite2D" parent="Spikes"]
+position = Vector2(215, 603)
+scale = Vector2(0.0744088, 0.0667069)
+texture = ExtResource("4_wkiaj")
+
+[node name="Area2D" type="Area2D" parent="Spikes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Area2D"]
+position = Vector2(213, 605.25)
+shape = SubResource("RectangleShape2D_36bn4")
+
+[node name="Spikes2" type="StaticBody2D" parent="."]
+position = Vector2(-1, 173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes2"]
+position = Vector2(214, 609)
+shape = SubResource("RectangleShape2D_yu6uy")
+
+[node name="Trampa2" type="Sprite2D" parent="Spikes2"]
+position = Vector2(215, 603)
+scale = Vector2(0.0744088, 0.0667069)
+texture = ExtResource("4_wkiaj")
+
+[node name="Area2D" type="Area2D" parent="Spikes2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes2/Area2D"]
+position = Vector2(213, 605.25)
+shape = SubResource("RectangleShape2D_36bn4")
+
+[node name="Spikes3" type="StaticBody2D" parent="."]
+position = Vector2(-130, 173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes3"]
+position = Vector2(214, 609)
+shape = SubResource("RectangleShape2D_yu6uy")
+
+[node name="Trampa2" type="Sprite2D" parent="Spikes3"]
+position = Vector2(215, 603)
+scale = Vector2(0.0744088, 0.0667069)
+texture = ExtResource("4_wkiaj")
+
+[node name="Area2D" type="Area2D" parent="Spikes3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes3/Area2D"]
+position = Vector2(213, 605.25)
+shape = SubResource("RectangleShape2D_36bn4")
+
+[node name="Spikes5" type="StaticBody2D" parent="."]
+position = Vector2(-194, 173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes5"]
+position = Vector2(214, 609)
+shape = SubResource("RectangleShape2D_yu6uy")
+
+[node name="Trampa2" type="Sprite2D" parent="Spikes5"]
+position = Vector2(215, 603)
+scale = Vector2(0.0744088, 0.0667069)
+texture = ExtResource("4_wkiaj")
+
+[node name="Area2D" type="Area2D" parent="Spikes5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes5/Area2D"]
+position = Vector2(213, 605.25)
+shape = SubResource("RectangleShape2D_36bn4")
+
+[node name="Spikes4" type="StaticBody2D" parent="."]
+position = Vector2(63, 173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes4"]
+position = Vector2(214, 609)
+shape = SubResource("RectangleShape2D_yu6uy")
+
+[node name="Trampa2" type="Sprite2D" parent="Spikes4"]
+position = Vector2(215, 603)
+scale = Vector2(0.0744088, 0.0667069)
+texture = ExtResource("4_wkiaj")
+
+[node name="Area2D" type="Area2D" parent="Spikes4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes4/Area2D"]
+position = Vector2(213, 605.25)
+shape = SubResource("RectangleShape2D_36bn4")
+
+[node name="pared2" type="StaticBody2D" parent="."]
+position = Vector2(-6485, 969)
+rotation = -1.56581
+scale = Vector2(0.692577, 7.78534)
+skew = -0.00494778
+
+[node name="floor" type="CollisionShape2D" parent="pared2"]
+position = Vector2(1216.55, 830.282)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cdmwf")
+
+[node name="pared3" type="StaticBody2D" parent="."]
+position = Vector2(-6485, 969)
+rotation = -1.56581
+scale = Vector2(0.692577, 7.78534)
+skew = -0.00494778
+
+[node name="floor" type="CollisionShape2D" parent="pared3"]
+position = Vector2(1201.72, 881.638)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cdmwf")
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(-234, 341)
+scale = Vector2(1.65951, 0.744048)
+
+[node name="floor" type="CollisionShape2D" parent="floor"]
+position = Vector2(293, 620)
+shape = SubResource("RectangleShape2D_cdmwf")
+
+[node name="Plataformahielo" type="Sprite2D" parent="."]
+position = Vector2(175, 642)
+scale = Vector2(0.544105, 0.5)
+texture = ExtResource("2_j8bi8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plataformahielo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformahielo/StaticBody2D"]
+position = Vector2(0, -52)
+scale = Vector2(14.3085, 1.38514)
+shape = SubResource("RectangleShape2D_2qacp")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_fd7e7")]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("3_mmo53")]
+position = Vector2(165, 570)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-6, 0)
+ignore_rotation = false
+zoom = Vector2(1.25, 1.25)
+limit_left = 12
+limit_top = -9999999
+limit_right = 360
+
+[connection signal="body_entered" from="Spikes/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Spikes2/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Spikes3/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Spikes5/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Spikes4/Area2D" to="." method="_on_area_2d_body_entered"]

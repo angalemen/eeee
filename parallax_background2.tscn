@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv0g2lxklkvy4"]
+
+[ext_resource type="Script" path="res://parallax_background2.gd" id="1_unfmm"]
+[ext_resource type="Texture2D" uid="uid://06078lcexcxq" path="res://assetsbuenos/mapahielo/snow.png" id="2_71pdc"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_offset = Vector2(300, 300)
+script = ExtResource("1_unfmm")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(-2, -4.99998)
+rotation = 0.00857325
+scale = Vector2(1.19099, 1.04127)
+motion_mirroring = Vector2(3000, 3000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(162.937, 117.492)
+scale = Vector2(0.588856, 0.588856)
+texture = ExtResource("2_71pdc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(155.645, 376.872)
+scale = Vector2(0.579947, 0.579947)
+texture = ExtResource("2_71pdc")
